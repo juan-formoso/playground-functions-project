@@ -17,13 +17,18 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumber) {
+  if (phoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  } 
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB <= lineC || lineA + lineC <= lineB || lineB + lineC <= lineA)
+        return false;
+    else
+        return true;
 }
 
 // Desafio 13
