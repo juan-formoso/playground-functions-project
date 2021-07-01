@@ -74,6 +74,7 @@ function fizzBuzz(arrayOfNumbers) {
 } 
 
 // Desafio 9
+// Referência usada como BASE para desenvolvimento do código abaixo: https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript
 function encode(vowels) {
   vowels = vowels.replace(/a/g, '1');
   vowels = vowels.replace(/e/g, '2');
