@@ -59,17 +59,16 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayOfNumbers) {
   let newArray = [];
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    if (((arrayOfNumbers[index] % 3) === 0) && ((arrayOfNumbers[index] % 5) === 0)) {
-      newArray.push("fizzBuzz");
-    } else if ((numbers[index] % 3) === 0) {
-      newArray.push("fizz");
-    } else if ((numbers[index] % 5) === 0) {
-      newArray.push("buzz");
+    if (arrayOfNumbers[index] % 5 === 0 && arrayOfNumbers[index] % 3 === 0) {
+      newArray.push("fizzBuzz")
+    } else if (arrayOfNumbers[index] % 5 === 0) {
+      newArray.push("buzz")
+    } else if (arrayOfNumbers[index] % 3 === 0) {
+      newArray.push("fizz")
     } else {
-      newArray.push("bug!");
+      newArray.push("bug!")
     }
-  }
-  return newArray;
+  } return newArray;
 } 
 
 // Desafio 9
