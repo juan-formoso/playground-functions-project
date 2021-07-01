@@ -32,9 +32,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(drinks) {
+  let amountOfDrinks = drinks.match(/\d+/g).map(Number);
+  let cupsOfWater = 0;
+  for (let index = 0; index < amountOfDrinks.length; index += 1) {
+    cupsOfWater += Number(amountOfDrinks[index]);
+  } if (cupsOfWater === 1) {
+    return cupsOfWater + ' copo de água'
+  } else {
+    return cupsOfWater + ' copos de água'
+  }
+} 
 
 module.exports = {
   generatePhoneNumber,
