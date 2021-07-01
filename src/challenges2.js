@@ -17,10 +17,27 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(phoneNumber) {
-  if (phoneNumber.length !== 11) {
-    return 'Array com tamanho incorreto.'
-  } 
+function generatePhoneNumber(digit) {
+  let phoneNumber = "";
+  for (let index = 0; index < digit.length; index += 1) {
+    if (digit.length !== 11) {
+      return 'Array com tamanho incorreto.'
+    } else if (digit[index] < 0 || digit[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+    let number = 0
+    for (let index2 = 0; index2 < digit.length; index2 += 1) {
+      if (digit[index2] === digit[index]) {
+        number += 1;
+      }
+    } if (number > 2) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  } if (digit.length === 11) {
+    return (phoneNumber = phoneNumber + "(" + digit[0] + digit[1] + ")" + ' ' + digit[2] + digit[3] + digit[4] + digit[5] + digit[6] + '-' + digit[7] + digit[8] + digit[9] + digit[10]);
+  } else {
+    return ('Array com tamanho incorreto.');
+  }
 }
 
 // Desafio 12
@@ -32,6 +49,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// Referẽncia usada como BASE para desenvolvimento do código abaixo: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
 function hydrate(drinks) {
   let amountOfDrinks = drinks.match(/\d+/g).map(Number);
   let cupsOfWater = 0;
