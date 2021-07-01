@@ -43,6 +43,7 @@ function highestCount(number) {
 }
 
 // Desafio 7
+// Referência utilizada para COMPREENSÃO do comando 'Math.abs();' : https://www.w3schools.com/jsref/jsref_abs.asp
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Position = Math.abs(mouse - cat1);
   let cat2Position = Math.abs(mouse - cat2);
@@ -56,6 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Referência utilizada como BASE para desenvolvimento do código abaixo: https://hellodevworld.com/interview-help/fizz-buzz-solution-javascript
 function fizzBuzz(arrayOfNumbers) {
   let newArray = [];
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
@@ -72,11 +74,21 @@ function fizzBuzz(arrayOfNumbers) {
 } 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(vowels) {
+  vowels = vowels.replace(/a/g, '1');
+  vowels = vowels.replace(/e/g, '2');
+  vowels = vowels.replace(/i/g, '3');
+  vowels = vowels.replace(/o/g, '4');
+  vowels = vowels.replace(/u/g, '5');
+  return vowels;
 }
-function decode() {
-  // seu código aqui
+function decode(numbers) {
+  numbers = numbers.replace(/1/g, 'a');
+  numbers = numbers.replace(/2/g, 'e');
+  numbers = numbers.replace(/3/g, 'i');
+  numbers = numbers.replace(/4/g, 'o');
+  numbers = numbers.replace(/5/g, 'u');
+  return numbers;
 }
 
 module.exports = {
